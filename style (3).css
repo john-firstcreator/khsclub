@@ -1,0 +1,390 @@
+/* ============================================================
+   KHS Clubs — club directory
+   Palette (ivory / navy / gold, ~60-30-10):
+     Ivory      #F5F5F0  page background (60%)
+     White      #FFFFFF  cards, inputs, header
+     Deep navy  #243B59  hero band, footer, active chips (30%)
+     Slate blue #42678C  secondary text and links
+     Muted gold #D5B779  accents, borders, badges (10%)
+     Charcoal   #26364A  body text
+   Font: EB Garamond throughout.
+   ============================================================ */
+
+:root {
+  /* EB Garamond runs small, so the scale is nudged up */
+  --text-xs: clamp(0.85rem, 0.8rem + 0.25vw, 0.975rem);
+  --text-sm: clamp(1rem, 0.95rem + 0.3vw, 1.125rem);
+  --text-base: clamp(1.1rem, 1.05rem + 0.25vw, 1.25rem);
+  --text-lg: clamp(1.3rem, 1.15rem + 0.75vw, 1.7rem);
+  --text-xl: clamp(2.1rem, 1.5rem + 2.6vw, 3.6rem);
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  --color-bg: #f5f5f0;
+  --color-surface: #ffffff;
+  --color-surface-2: #ecdfbb;
+  --color-header: #ffffff;
+  --color-navy: #243b59;
+  --color-slate: #42678c;
+  --color-gold: #d5b779;
+  --color-text: #26364a;
+  --color-text-muted: #4d5f76;
+  --color-border: #b9c3d1;
+  --color-divider: #e1e4ea;
+
+  --color-accent: #243b59;
+  --color-primary: #243b59;
+  --color-accent-soft: #f3ead3;
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-full: 9999px;
+
+  --transition-interactive: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  --shadow-sm: 0 1px 2px rgb(36 59 89 / 0.08);
+  --shadow-md: 0 6px 16px rgb(36 59 89 / 0.16);
+
+  --content-default: 1120px;
+
+  --font-display: 'EB Garamond', Garamond, Georgia, serif;
+  --font-body: 'EB Garamond', Garamond, Georgia, serif;
+}
+
+/* ---------- Layout ---------- */
+
+.container {
+  max-width: var(--content-default);
+  margin-inline: auto;
+  padding-inline: var(--space-4);
+}
+
+.skip-link {
+  position: absolute;
+  left: var(--space-4);
+  top: -100%;
+  z-index: 100;
+  background: var(--color-navy);
+  color: #fff;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+}
+
+.skip-link:focus {
+  top: var(--space-2);
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  background: var(--color-header);
+  border-bottom: 3px solid var(--color-gold);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding-block: var(--space-3);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.brand-mark {
+  flex: none;
+  width: auto;
+  height: 48px;
+}
+
+.header-note {
+  margin-left: auto;
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--color-slate);
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  background: var(--color-navy);
+  padding-block: var(--space-12) var(--space-10);
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-3);
+}
+
+.section-header h1 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-xl);
+  letter-spacing: -0.005em;
+  color: #ffffff;
+  max-width: 20ch;
+}
+
+.section-header h1::after {
+  content: '';
+  display: block;
+  width: 72px;
+  height: 4px;
+  margin: var(--space-4) auto 0;
+  border-radius: var(--radius-full);
+  background: var(--color-gold);
+}
+
+.section-header p {
+  color: #d8dfe9;
+  font-size: var(--text-base);
+  max-width: 52ch;
+  margin-inline: auto;
+}
+
+/* ---------- Controls ---------- */
+
+#clubs {
+  padding-block: var(--space-8) var(--space-12);
+}
+
+.controls {
+  display: grid;
+  gap: var(--space-5);
+  margin-bottom: var(--space-5);
+}
+
+.search-field label,
+.filter-group legend {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: var(--space-2);
+}
+
+.search-field input {
+  width: 100%;
+  min-height: 52px;
+  padding-block: 0;
+  padding-inline: var(--space-4);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  font-size: var(--text-base);
+}
+
+.search-field input::placeholder {
+  color: #5f6e82;
+}
+
+.search-field input:hover {
+  border-color: var(--color-slate);
+}
+
+.filter-group {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.chip {
+  min-height: 46px;
+  padding-inline: var(--space-4);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-full);
+  background: var(--color-surface);
+  color: var(--color-navy);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.chip:hover {
+  border-color: var(--color-gold);
+  background: var(--color-accent-soft);
+}
+
+.chip:active {
+  transform: scale(0.97);
+}
+
+.chip[aria-pressed='true'] {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+}
+
+/* ---------- Result count ---------- */
+
+.result-count {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-4);
+}
+
+/* ---------- Cards ---------- */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
+  gap: var(--space-4);
+}
+
+.club-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-divider);
+  border-top: 4px solid var(--color-gold);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  box-shadow: var(--shadow-sm);
+}
+
+.club-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.card-top {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+.card-top h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-navy);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  background: var(--color-surface-2);
+  color: var(--color-text);
+}
+
+.club-card > p {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.detail-list {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+}
+
+.detail-list dt {
+  font-weight: 700;
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+  padding-top: 0.2em;
+}
+
+.detail-list dd {
+  color: var(--color-text);
+}
+
+.card-link {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-slate);
+}
+
+.club-card > .verified {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  border-top: 1px solid var(--color-divider);
+  padding-top: var(--space-2);
+  margin-top: auto;
+}
+
+/* ---------- Empty state ---------- */
+
+.empty-state {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding: var(--space-10) var(--space-6);
+  background: var(--color-surface);
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  color: var(--color-text-muted);
+}
+
+.empty-state.visible {
+  display: flex;
+}
+
+.empty-state h2 {
+  color: var(--color-navy);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-lg);
+}
+
+.empty-state p {
+  font-size: var(--text-sm);
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  border-top: 4px solid var(--color-gold);
+  background: var(--color-navy);
+  padding-block: var(--space-6);
+}
+
+.site-footer p {
+  font-size: var(--text-sm);
+  color: #d8dfe9;
+}
+
+.site-footer strong {
+  color: #ffffff;
+}
+
+.site-footer p + p {
+  margin-top: var(--space-2);
+}
