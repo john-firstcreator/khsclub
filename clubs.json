@@ -84,7 +84,7 @@
     {
       "id": "coding-club",
       "name": "Coding Club",
-      "category": "Competition","STEM"
+      "category": "Competition",
       "description": "Build apps, websites, games & projects through learning computer science",
       "meetingDay": "Wednesdays",
       "meetingTime": "2:45-3:15",
@@ -110,7 +110,7 @@
     {
       "id": "criminal-justice",
       "name": "Criminal Justice Club",
-      "category": "Career","Competition"
+      "category": "Career",
       "description": "",
       "meetingDay": "Variable Tuesdays",
       "meetingTime": "2:45",
