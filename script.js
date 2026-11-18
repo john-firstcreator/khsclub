@@ -38,15 +38,24 @@
 
     var q = state.query.trim().toLowerCase();
     var matches = clubs.filter(function (club) {
-      var inCategory =
-        state.category === 'All' || club.category === state.category;
+    var categories = Array.isArray(club.category)
+  ? club.category
+  : [club.category];
+
+var inCategory =
+  state.category === 'All' ||
+  categories.includes(state.category);
+var inCategory =
+  state.category === 'All' ||
+  categories.includes(state.category);
       var haystack = (
-        club.name +
-        ' ' +
-        club.category +
-        ' ' +
-        club.description +
-        ' ' +
+club.name +
+' ' +
+(Array.isArray(club.category)
+  ? club.category.join(' ')
+  : club.category) +
+' ' +
+club.description +
         club.sponsor +
         ' ' +
         club.meetingDay
