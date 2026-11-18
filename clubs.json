@@ -1,8 +1,9 @@
 {
   "note": "Club list provided by the school, November 2026. Meeting times, locations, and join details are being confirmed with each sponsor.",
   "lastReviewed": "2026-11-03",
-  "clubs": [
-    {
+  "clubs": 
+ 
+  {
       "id": "academic-decathlon",
       "name": "Academic Decathlon & Octathlon",
       "category": "Competition",
