@@ -88,7 +88,12 @@ club.description +
       var children = [
         el('div', { class: 'card-top' }, [
           el('h2', { text: club.name }),
-          el('span', { class: 'badge', text: club.category })
+      el('span', {
+  class: 'badge',
+  text: Array.isArray(club.category)
+    ? club.category.join(' / ')
+    : club.category
+})
         ])
       ];
 
