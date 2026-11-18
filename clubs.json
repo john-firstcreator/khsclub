@@ -42,6 +42,19 @@
       "verified": "2026-11-03"
     },
     {
+      "id": "bearkat-unidos",
+      "name": "Bearkat Unidos",
+      "category": "Culture",
+      "description": "Celebrate Spanish language and culture.",
+      "meetingDay": "Every last Thursday of the month",
+      "meetingTime": "2:45-3:30 PM",
+      "location": "RM 430",
+      "sponsor": "Jennifer Alvarenga Herrera",
+      "join": "See the sponsor for meeting details and how to join.",
+      "link": "",
+      "verified": "2026-11-03"
+    },  
+    {
       "id": "bsu",
       "name": "Black Student Union (BSU)",
       "category": "Culture",
@@ -258,19 +271,6 @@
       "meetingTime": "2:45-3:00 PM",
       "location": "RM 160",
       "sponsor": "Cynthia Niederhofer",
-      "join": "See the sponsor for meeting details and how to join.",
-      "link": "",
-      "verified": "2026-11-03"
-    },
-    {
-      "id": "Bearkat Unidos",
-      "name": "Bearkat Unidos",
-      "category": "Culture",
-      "description": "Celebrate Spanish language and culture.",
-      "meetingDay": "Every last Thursday of the month",
-      "meetingTime": "2:45-3:30 PM",
-      "location": "RM 430",
-      "sponsor": "Jennifer Alvarenga Herrera",
       "join": "See the sponsor for meeting details and how to join.",
       "link": "",
       "verified": "2026-11-03"
