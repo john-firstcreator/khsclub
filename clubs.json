@@ -109,7 +109,7 @@
     {
       "id": "criminal-justice",
       "name": "Criminal Justice Club",
-      "category": ["Career","Competition"]
+      "category": "Career",
       "description": "",
       "meetingDay": "Variable Tuesdays",
       "meetingTime": "2:45",
