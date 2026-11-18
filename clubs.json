@@ -1,8 +1,7 @@
 {
   "note": "Club list provided by the school, November 2026. Meeting times, locations, and join details are being confirmed with each sponsor.",
   "lastReviewed": "2026-11-03",
-  "clubs": 
- 
+  "clubs": [
   {
       "id": "academic-decathlon",
       "name": "Academic Decathlon & Octathlon",
@@ -84,7 +83,7 @@
     {
       "id": "coding-club",
       "name": "Coding Club",
-      "category": "Competition",
+      "category": ["Competition","STEM"]
       "description": "Build apps, websites, games & projects through learning computer science",
       "meetingDay": "Wednesdays",
       "meetingTime": "2:45-3:15",
@@ -93,7 +92,7 @@
       "join": "See a sponsor for eligibility and meeting details.",
       "link": "",
       "verified": "2026-11-03"
-    }  
+    }, 
     {
       "id": "creative-writing",
       "name": "Creative Writing Club",
@@ -110,7 +109,7 @@
     {
       "id": "criminal-justice",
       "name": "Criminal Justice Club",
-      "category": "Career",
+      "category": ["Career","Competition]
       "description": "",
       "meetingDay": "Variable Tuesdays",
       "meetingTime": "2:45",
@@ -406,3 +405,5 @@
       "link": "",
       "verified": "2026-11-13"
     }
+  ]
+}
