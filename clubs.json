@@ -83,7 +83,7 @@
     {
       "id": "coding-club",
       "name": "Coding Club",
-      "category": ["Competition","STEM"]
+      "category": "Competition",
       "description": "Build apps, websites, games & projects through learning computer science",
       "meetingDay": "Wednesdays",
       "meetingTime": "2:45-3:15",
@@ -109,7 +109,7 @@
     {
       "id": "criminal-justice",
       "name": "Criminal Justice Club",
-      "category": ["Career","Competition]
+      "category": ["Career","Competition"]
       "description": "",
       "meetingDay": "Variable Tuesdays",
       "meetingTime": "2:45",
@@ -245,45 +245,6 @@
       "meetingTime": "6:50 & 2:35",
       "location": "LGI",
       "sponsor": "Emalie Eaton",
-      "join": "See the sponsor for meeting details and how to join.",
-      "link": "",
-      "verified": "2026-11-03"
-    },
-    {
-      "id": "tri-m",
-      "name": "Music Honor Society (Tri-M)",
-      "category": "Arts",
-      "description": "Honor society recognizing music students.",
-      "meetingDay": "To be confirmed",
-      "meetingTime": "",
-      "location": "To be confirmed",
-      "sponsor": "Rebecca Hickman or Yajayra Soria",
-      "join": "See a sponsor for eligibility and meeting details.",
-      "link": "",
-      "verified": "2026-11-03"
-    },
-    {
-      "id": "nhs",
-      "name": "National Honor Society (NHS)",
-      "category": "Service",
-      "description": "Honor society for scholarship, service, leadership, and character.",
-      "meetingDay": "To be confirmed",
-      "meetingTime": "",
-      "location": "To be confirmed",
-      "sponsor": "Julie Cox or Jackie Sadeghi",
-      "join": "Email a sponsor for application information and meeting details.",
-      "link": "",
-      "verified": "2026-11-03"
-    },
-    {
-      "id": "paws-for-purpose",
-      "name": "Paws for Purpose",
-      "category": "Service",
-      "description": "Designed to spread awareness for animal abuse and the overpopulation of shelters through a fun environment to volunteer with friends",
-      "meetingDay": "To be confirmed",
-      "meetingTime": "See Updates",
-      "location": "RM 266",
-      "sponsor": "Michael Meece",
       "join": "See the sponsor for meeting details and how to join.",
       "link": "",
       "verified": "2026-11-03"
